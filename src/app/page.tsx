@@ -6,6 +6,7 @@ import { About } from "@/components/sections/About";
 import { Features } from "@/components/sections/Features";
 import { Workflow } from "@/components/sections/Workflow";
 import { Portfolio } from "@/components/sections/Portfolio";
+import { Logos } from "@/components/sections/Logos";
 import { QuoteBanner } from "@/components/sections/QuoteBanner";
 import { Team } from "@/components/sections/Team";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -23,6 +24,7 @@ export default function Home() {
       <Features />
       <Workflow />
       <Portfolio />
+      <Logos />
       <Team />
       <Testimonials />
       <Pricing />

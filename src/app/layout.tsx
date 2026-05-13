@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Chakra_Petch } from "next/font/google";
 import "./globals.css";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -32,6 +33,13 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-primary/30 selection:text-primary">
         {children}
+        <FloatingWhatsApp
+          whatsappNumber="+91-99990-35340"
+          callNumber="+91-11-26691429"
+          email="channels@dmsystems.in"
+          address={"E-2/7 & 8, 2nd. Floor, Malviya Nagar, New Delhi – 110017"}
+          companyName="DMS Systems"
+        />
       </body>
     </html>
   );

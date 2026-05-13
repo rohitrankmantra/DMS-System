@@ -4,22 +4,30 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowRight, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Menu, X, ArrowRight, Phone, Mail, MapPin, Clock, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+const companyLinks = [
+  { name: "About Us", href: "/company#about" },
+  { name: "Team", href: "/company#team" },
+  { name: "What We Do", href: "/company#features" },
+  { name: "Mission & Vision", href: "/company#mission-vision" },
+];
+
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Solutions", href: "#features" },
-  { name: "Approach", href: "#workflow" },
-  { name: "Industries", href: "#portfolio" },
-  { name: "Team", href: "#team" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "Solutions", href: "/#features" },
+  { name: "Services", href: "/services" },
+  { name: "Consulting", href: "/consulting" },
+  { name: "Contact", href: "/contact-us" },
 ];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [companyOpen, setCompanyOpen] = useState(false);
+  const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,14 +61,58 @@ export const Navbar = () => {
               <div className="w-11 h-11 rounded-md overflow-hidden border border-blue-200 bg-white shadow-[0_6px_20px_rgba(28,120,200,0.22)] group-hover:rotate-6 transition-transform duration-300">
                 <Image src="/logo.jpg" alt="DMS logo" width={44} height={44} className="object-cover w-full h-full" />
               </div>
-              <span className="text-xl font-black tracking-tight text-[#0F4C92] uppercase heading-tech">
-                DMS Systems
+              <span className="text-lg font-black tracking-tight text-[#0F4C92] uppercase heading-tech">
+                 Systems
               </span>
             </Link>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-8">
-              {navLinks.map((link) => (
+              {navLinks.slice(0, 1).map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm font-bold uppercase tracking-wider text-slate-500 hover:text-[#0F4C92] transition-colors relative group"
+                >
+                  {link.name}
+                </Link>
+              ))}
+
+              <div
+                className="relative"
+                onMouseEnter={() => setCompanyOpen(true)}
+                onMouseLeave={() => setCompanyOpen(false)}
+              >
+                <button className="flex items-center gap-1 text-sm font-bold uppercase tracking-wider text-slate-500 hover:text-[#0F4C92] transition-colors">
+                  Company
+                  <ChevronDown size={14} />
+                </button>
+
+                <AnimatePresence>
+                  {companyOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 8 }}
+                      transition={{ duration: 0.18 }}
+                      className="absolute left-1/2 top-full mt-4 w-72 -translate-x-1/2 rounded-3xl border border-slate-200 bg-white p-3 shadow-[0_18px_50px_rgba(15,76,146,0.12)]"
+                    >
+                      {companyLinks.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-bold text-slate-700 hover:bg-[#0F4C92]/5 hover:text-[#0F4C92] transition-colors"
+                        >
+                          {item.name}
+                          <ArrowRight size={14} />
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {navLinks.slice(1).map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
@@ -73,9 +125,9 @@ export const Navbar = () => {
 
             <div className="hidden md:flex items-center gap-4">
               <Button size="icon" variant="ghost" className="rounded-full text-[#0F4C92] hover:bg-blue-50">
-                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                {/* <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
                   <Menu className="w-5 h-5" />
-                </div>
+                </div> */}
               </Button>
               <Button className="bg-[#0F4C92] hover:bg-[#0C3F79] text-white font-bold rounded-full px-8 h-12 heading-tech">
                 START ASSESSMENT
@@ -139,7 +191,7 @@ export const Navbar = () => {
                 </div>
 
                 {/* About Section */}
-                <div className="mb-8 p-6 bg-gradient-to-br from-blue-50 to-sky-50 rounded-3xl border border-blue-200">
+                <div className="mb-8 p-6 bg-linear-to-br from-blue-50 to-sky-50 rounded-3xl border border-blue-200">
                   <h3 className="text-lg font-black text-slate-900 mb-4 heading-tech">About Us</h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
                     A modern IT infrastructure and security firm focused on delivering premium enterprise solutions. We combine architecture, implementation, and long-term support under one accountable team.
@@ -150,7 +202,41 @@ export const Navbar = () => {
                 <div className="mb-8">
                   <h3 className="text-sm font-black text-slate-400 mb-4 uppercase tracking-widest heading-tech">Quick Links</h3>
                   <div className="flex flex-col gap-2">
-                    {navLinks.map((link) => (
+                    <Link
+                      href="/"
+                      className="group flex items-center justify-between py-4 px-5 rounded-2xl text-base font-bold uppercase tracking-wider text-slate-700 hover:text-[#0F4C92] hover:bg-[#0F4C92]/5 transition-all"
+                      onClick={() => setSidebarOpen(false)}
+                    >
+                      Home
+                      <ArrowRight size={20} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all text-[#0F4C92]" />
+                    </Link>
+
+                    <button
+                      onClick={() => setMobileCompanyOpen(!mobileCompanyOpen)}
+                      className="group flex items-center justify-between py-4 px-5 rounded-2xl text-base font-bold uppercase tracking-wider text-slate-700 hover:text-[#0F4C92] hover:bg-[#0F4C92]/5 transition-all"
+                    >
+                      Company
+                      <ChevronDown size={18} className={cn("transition-transform", mobileCompanyOpen ? "rotate-180" : "")}
+                      />
+                    </button>
+
+                    {mobileCompanyOpen && (
+                      <div className="ml-4 flex flex-col gap-2 border-l border-slate-200 pl-4">
+                        {companyLinks.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.href}
+                            className="group flex items-center justify-between py-3 px-4 rounded-2xl text-sm font-bold uppercase tracking-wider text-slate-600 hover:text-[#0F4C92] hover:bg-[#0F4C92]/5 transition-all"
+                            onClick={() => setSidebarOpen(false)}
+                          >
+                            {link.name}
+                            <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all text-[#0F4C92]" />
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+
+                    {navLinks.slice(1).map((link) => (
                       <Link
                         key={link.name}
                         href={link.href}
@@ -169,34 +255,34 @@ export const Navbar = () => {
                   <h3 className="text-sm font-black text-slate-400 mb-4 uppercase tracking-widest heading-tech">Contact Info</h3>
                   <div className="flex flex-col gap-4">
                     <div className="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200">
-                      <div className="w-10 h-10 rounded-full bg-[#0F4C92]/10 flex items-center justify-center text-[#0F4C92] flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-[#0F4C92]/10 flex items-center justify-center text-[#0F4C92] shrink-0">
                         <Phone size={18} />
                       </div>
                       <div>
                         <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide">Phone</p>
-                        <p className="text-sm font-bold text-slate-900">+91 98765 43210</p>
+                        <p className="text-sm font-bold text-slate-900">+91.011.26691429</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200">
-                      <div className="w-10 h-10 rounded-full bg-[#0F4C92]/10 flex items-center justify-center text-[#0F4C92] flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-[#0F4C92]/10 flex items-center justify-center text-[#0F4C92] shrink-0">
                         <Mail size={18} />
                       </div>
                       <div>
                         <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide">Email</p>
-                        <p className="text-sm font-bold text-slate-900">contact@dmsystems.in</p>
+                        <p className="text-sm font-bold text-slate-900">channels@dmsystems.in</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200">
-                      <div className="w-10 h-10 rounded-full bg-[#0F4C92]/10 flex items-center justify-center text-[#0F4C92] flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-[#0F4C92]/10 flex items-center justify-center text-[#0F4C92] shrink-0">
                         <MapPin size={18} />
                       </div>
                       <div>
                         <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide">Location</p>
-                        <p className="text-sm font-bold text-slate-900">Delhi, India</p>
+                        <p className="text-sm font-bold text-slate-900">Malviya Nagar, New Delhi</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200">
-                      <div className="w-10 h-10 rounded-full bg-[#0F4C92]/10 flex items-center justify-center text-[#0F4C92] flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-[#0F4C92]/10 flex items-center justify-center text-[#0F4C92] shrink-0">
                         <Clock size={18} />
                       </div>
                       <div>

@@ -49,6 +49,23 @@ const features = [
   },
 ];
 
+function IconBadge({
+  icon: Icon,
+}: {
+  icon: React.ComponentType<{ size?: number; className?: string }>;
+}) {
+  return (
+    <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-[1.6rem] bg-linear-to-br from-[#0F4C92] via-[#165ca7] to-[#0b3a74] p-0.5 shadow-[0_18px_35px_rgba(15,76,146,0.18)]">
+      <div className="absolute -inset-2 rounded-[1.9rem] bg-[#0F4C92]/10 blur-md" />
+      <div className="absolute -right-1 -top-1 h-3.5 w-3.5 rounded-full border-2 border-white bg-[#58a6ff] shadow-sm" />
+      <div className="relative flex h-full w-full items-center justify-center rounded-[1.45rem] border border-white/20 bg-white/10 backdrop-blur-md">
+        <div className="absolute inset-2.5 rounded-[1rem] bg-linear-to-br from-white/14 to-transparent" />
+        <Icon size={28} className="relative z-10 text-white drop-shadow-[0_2px_2px_rgba(15,76,146,0.25)]" />
+      </div>
+    </div>
+  );
+}
+
 export const Features = () => {
   return (
     <section id="features" className="py-24 relative overflow-hidden bg-white">
@@ -84,33 +101,88 @@ export const Features = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
+              transition={{ delay: index * 0.08, duration: 0.6 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group relative"
+              className="group relative min-h-55"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 rounded-[2.5rem] blur-xl group-hover:blur-2xl transition-all" />
-              <div className="relative bg-white rounded-[2.5rem] border border-slate-200 p-8 shadow-[0_4px_30px_rgba(15,76,146,0.08)] group-hover:shadow-[0_10px_50px_rgba(15,76,146,0.15)] transition-all">
-                <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
-                  <feature.icon size={40} className="text-white" />
-                </div>
-                <h3 className="text-2xl font-black text-slate-900 mb-4 heading-tech group-hover:text-[#0F4C92] transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-slate-600 mb-8 leading-relaxed font-medium">
-                  {feature.description}
-                </p>
-                <div className="flex items-center gap-3 text-[#0F4C92] font-bold group-hover:gap-4 transition-all">
-                  <span>Learn more</span>
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
+              {(() => {
+                const variant = index % 3;
+                // Variant A: match the glass card style used by variants C
+                if (variant === 0) {
+                  return (
+                    <>
+                      <div className="absolute inset-0 rounded-[2rem] bg-linear-to-br from-[#f8fbff] to-[#f1f7ff] blur-md" />
+                      <div className="relative bg-white/60 backdrop-blur-sm rounded-[2rem] border border-slate-100 p-8 shadow-[0_4px_24px_rgba(15,76,146,0.04)] transition-all">
+                        <div className="flex items-center gap-4 mb-4">
+                          <IconBadge icon={feature.icon} />
+                          <h3 className="text-2xl font-black text-slate-900 heading-tech group-hover:text-[#0F4C92] transition-colors">
+                            {feature.title}
+                          </h3>
+                        </div>
+                        <p className="text-slate-600 mb-6 leading-relaxed font-medium">{feature.description}</p>
+                        <div className="flex items-center gap-3 text-[#0F4C92] font-bold">
+                          <span>Learn more</span>
+                          <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
+                    </>
+                  );
+                }
+
+                // Variant B: ribbon & tilted icon
+                if (variant === 1) {
+                  return (
+                    <>
+                      <div className="absolute inset-0 rounded-[2rem] bg-linear-to-br from-[#fff7ed] to-[#fff1e6] blur-lg" />
+                      <div className="relative bg-white/95 rounded-[2rem] border border-slate-100 p-8 shadow-[0_6px_30px_rgba(11,37,77,0.04)] transition-all overflow-hidden">
+                        <div className="absolute right-4 top-4 transform rotate-12 bg-linear-to-r from-[#0F4C92] to-[#0b3a74] text-white px-3 py-1 rounded-md text-xs font-semibold">Core</div>
+                        <div className="flex flex-col items-start">
+                          <div className="mb-4 transform rotate-3">
+                            <IconBadge icon={feature.icon} />
+                          </div>
+                          <h3 className="text-2xl font-black text-slate-900 mb-3 heading-tech group-hover:text-[#0F4C92] transition-colors">
+                            {feature.title}
+                          </h3>
+                          <p className="text-slate-600 leading-relaxed font-medium mb-6">
+                            {feature.description}
+                          </p>
+                          <div className="mt-auto flex items-center gap-3 text-[#0F4C92] font-bold">
+                            <span>Learn more</span>
+                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  );
+                }
+
+                // Variant C: glass / soft card
+                return (
+                  <>
+                    <div className="absolute inset-0 rounded-[2rem] bg-linear-to-br from-[#f8fbff] to-[#f1f7ff] blur-md" />
+                    <div className="relative bg-white/60 backdrop-blur-sm rounded-[2rem] border border-slate-100 p-8 shadow-[0_4px_24px_rgba(15,76,146,0.04)] transition-all">
+                      <div className="flex items-center gap-4 mb-4">
+                        <IconBadge icon={feature.icon} />
+                        <h3 className="text-2xl font-black text-slate-900 heading-tech group-hover:text-[#0F4C92] transition-colors">
+                          {feature.title}
+                        </h3>
+                      </div>
+                      <p className="text-slate-600 mb-6 leading-relaxed font-medium">{feature.description}</p>
+                      <div className="flex items-center gap-3 text-[#0F4C92] font-bold">
+                        <span>Learn more</span>
+                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </>
+                );
+              })()}
             </motion.div>
           ))}
         </div>

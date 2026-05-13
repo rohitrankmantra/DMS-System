@@ -89,7 +89,7 @@ export const Portfolio = () => {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#0F172A] via-[#0F172A]/60 to-transparent" />
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
                   <div className="flex items-center gap-3 text-[#60A5FA] text-xs uppercase tracking-[0.25em] font-bold mb-4 heading-tech">
                     <span className="w-2 h-2 rounded-full bg-[#60A5FA]" />
