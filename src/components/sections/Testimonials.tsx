@@ -7,24 +7,24 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "CIO, Regional BFSI Group",
+    name: "Security Director, Enterprise Corp",
     role: "Financial Services",
     content:
-      "The cyber risk visibility model helped us defend security investments with board-level clarity.",
+      "D M Systems transformed our security posture with their comprehensive approach. Their 24x7 response team provides peace of mind, and their expertise in threat detection has proven invaluable.",
     avatar: "https://i.pravatar.cc/150?u=1",
   },
   {
-    name: "Head of IT, Logistics Enterprise",
-    role: "Logistics",
+    name: "CIO, Tech Solutions Ltd",
+    role: "Technology",
     content:
-      "DMS stabilized our branch connectivity rollout and improved incident response with a practical support model.",
+      "27 years of experience shows. DMS Systems designed and deployed a secure infrastructure that's now our competitive advantage. Highly recommended for enterprise deployments.",
     avatar: "https://i.pravatar.cc/150?u=2",
   },
   {
-    name: "CTO, Manufacturing Platform",
+    name: "IT Manager, Manufacturing Group",
     role: "Manufacturing",
     content:
-      "From assessment to implementation, the delivery discipline was excellent and the architecture scaled quickly.",
+      "From vulnerability assessment to implementation, their risk-driven approach and SLA-backed support has improved our security significantly. True partnership feels rare, but DMS delivers it.",
     avatar: "https://i.pravatar.cc/150?u=3",
   },
 ];

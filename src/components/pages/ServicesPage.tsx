@@ -7,54 +7,54 @@ import { ArrowRight, Shield, Code2, Search, Cpu, Radio, CheckCircle2 } from "luc
 
 const services = [
   {
-    id: "red-team",
-    title: "Red-team Assessment",
+    id: "network-security",
+    title: "Network Security",
     icon: Shield,
     summary:
-      "Simulate real-world attacker techniques to validate your defenses, test response readiness, and prioritize remediation with confidence.",
+      "Protect your organization's digital backbone with advanced network security solutions. We design and deploy segmentation, threat detection, and continuous monitoring to identify and block attacks before they compromise your systems.",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80",
-    bullets: ["Adversary emulation", "Controlled exploit validation", "Executive reporting"],
-    stat: "High-fidelity attack simulation",
+    bullets: ["Network segmentation", "Threat detection", "Real-time monitoring"],
+    stat: "Enterprise-grade protection",
   },
   {
-    id: "app-sec",
-    title: "Application Security",
+    id: "endpoint-protection",
+    title: "Endpoint Protection",
     icon: Code2,
     summary:
-      "Identify security weaknesses across code, APIs, authentication flows, and release pipelines before they become customer-facing incidents.",
+      "Secure every device across your organization with comprehensive endpoint protection. From malware defense to behavioral analysis, we ensure your devices remain protected against evolving threats.",
     image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600&q=80",
-    bullets: ["Source review", "API testing", "CI/CD guardrails"],
-    stat: "Secure software delivery",
+    bullets: ["Malware defense", "Behavior analysis", "Device hardening"],
+    stat: "Multi-layer defense",
   },
   {
-    id: "infra-vapt",
-    title: "Infrastructure VAPT",
+    id: "threat-detection",
+    title: "Threat Detection & Response",
     icon: Search,
     summary:
-      "Map exposure across servers, networks, and cloud workloads with a practical vulnerability program built for operational environments.",
+      "Stay ahead of threats with our 24x7 rapid response team. We detect anomalies in real-time, investigate incidents thoroughly, and respond with precision to minimize business impact and ensure continuity.",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600&q=80",
-    bullets: ["Asset discovery", "Exploit validation", "Risk prioritization"],
-    stat: "Infrastructure exposure control",
+    bullets: ["24x7 monitoring", "Rapid response", "Incident investigation"],
+    stat: "Proactive threat hunting",
   },
   {
-    id: "forensics",
-    title: "Forensics",
+    id: "infrastructure-design",
+    title: "Secure Infrastructure Design",
     icon: Radio,
     summary:
-      "Preserve evidence, reconstruct timelines, and support incident response with investigation workflows designed for clarity and defensibility.",
+      "Build security into your infrastructure from the ground up. We assess your current environment, identify vulnerabilities, design resilient architectures, and implement solutions tailored to your unique business needs.",
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&q=80",
-    bullets: ["Evidence capture", "Timeline analysis", "Incident support"],
-    stat: "Defensible investigation flow",
+    bullets: ["Architecture assessment", "Vulnerability mapping", "Risk mitigation"],
+    stat: "Infrastructure resilience",
   },
   {
-    id: "ot-iot",
-    title: "OT & IOT Security",
+    id: "compliance",
+    title: "Compliance & Auditing",
     icon: Cpu,
     summary:
-      "Protect industrial and connected devices with segmentation, visibility, and testing that respects uptime and safety constraints.",
+      "Strengthen your compliance posture and ensure regulatory requirements are met. Our expertise in security audits, vulnerability assessments, and compliance frameworks helps you maintain continuous security excellence.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80",
-    bullets: ["Segmentation strategy", "Device profiling", "Lifecycle hardening"],
-    stat: "Connected asset protection",
+    bullets: ["Security audits", "Compliance assessment", "Continuous monitoring"],
+    stat: "Compliance assurance",
   },
 ];
 
@@ -76,10 +76,10 @@ export function ServicesPage() {
             Services
           </span>
           <h1 className="mt-6 text-4xl md:text-6xl font-black uppercase tracking-tight text-slate-900 heading-tech">
-            Security services <span className="text-[#0F4C92]">built for modern teams</span>
+            Cybersecurity Solutions <span className="text-[#0F4C92]">For Your Organization</span>
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-slate-600 font-medium">
-            A premium service page inspired by your reference: bold tabs, deep navy framing, and a clean white content surface.
+            D M Systems delivers comprehensive cybersecurity services: network security, endpoint protection, threat detection & response, secure infrastructure design, and compliance assurance. We combine 27 years of expertise with 24x7 rapid response capabilities.
           </p>
         </div>
 

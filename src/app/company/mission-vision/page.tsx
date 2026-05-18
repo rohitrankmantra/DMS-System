@@ -1,0 +1,50 @@
+"use client";
+
+import { ShieldCheck, Eye } from "lucide-react";
+
+export default function Page() {
+  return (
+    <main className="relative flex min-h-screen flex-col overflow-x-hidden bg-slate-50">
+      <section className="relative overflow-hidden pt-32 pb-20">
+        <div className="absolute inset-0 bg-grid-white opacity-45 pointer-events-none" />
+        <div className="absolute inset-0 bg-pattern-logo-grid opacity-20 pointer-events-none" />
+        <div className="absolute left-0 top-24 h-72 w-72 rounded-full bg-[#0F4C92]/10 blur-[100px] pointer-events-none" />
+        <div className="absolute right-0 bottom-10 h-72 w-72 rounded-full bg-sky-300/20 blur-[110px] pointer-events-none" />
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-[#0F4C92] heading-tech shadow-sm">
+              Company
+            </span>
+            <h1 className="mt-6 text-4xl md:text-6xl font-black uppercase tracking-tight text-slate-900 heading-tech">Mission &amp; Vision</h1>
+            <p className="mt-5 text-lg leading-relaxed text-slate-600 font-medium">Our purpose and long-term outlook for secure digital transformation and resilient operations.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-6 mt-8 mb-12">
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_50px_rgba(15,76,146,0.08)]">
+            <div className="flex items-center gap-3 text-[#0F4C92] font-bold uppercase tracking-[0.24em] text-xs heading-tech">
+              <ShieldCheck size={16} /> Mission
+            </div>
+            <h2 className="mt-4 text-3xl font-black uppercase tracking-tight text-slate-900 heading-tech">Establish as Trusted Leader</h2>
+            <p className="mt-4 text-slate-600 leading-relaxed font-medium">
+              To establish D M Systems Pvt. Ltd. as a trusted leader in cybersecurity by delivering reliable, high-quality solutions and building enduring partnerships with our customers and partners through integrity, expertise, and consistent excellence.
+            </p>
+          </div>
+
+          <div className="rounded-[2rem] border border-slate-200 bg-linear-to-br from-[#0F4C92] to-[#0b3a74] p-8 text-white shadow-[0_18px_50px_rgba(15,76,146,0.18)]">
+            <div className="flex items-center gap-3 text-blue-200 font-bold uppercase tracking-[0.24em] text-xs heading-tech">
+              <Eye size={16} /> Vision
+            </div>
+            <h2 className="mt-4 text-3xl font-black uppercase tracking-tight heading-tech">Secure Digital Futures</h2>
+            <p className="mt-4 text-white/80 leading-relaxed font-medium">
+              To be the preferred cybersecurity partner for organisations seeking pragmatic, effective, and long-term protection — enabling secure digital transformation and resilient operations for businesses of all sizes.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

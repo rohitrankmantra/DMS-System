@@ -9,31 +9,31 @@ import Image from "next/image";
 
 const slides = [
   {
-    eyebrow: "Blue-White IT Strategy",
-    title: "Build a secure digital backbone that feels premium and engineered.",
+    eyebrow: "Cybersecurity Excellence",
+    title: "We Don't Just Secure—We Outsmart Threats.",
     description:
-      "A modern IT banner for cyber risk, infrastructure, and managed support, designed to mirror your logo palette and enterprise focus.",
-    stat: "150+ Deployments",
+      "Design, deploy, monitor, and audit world-class cybersecurity solutions powered by our relentless 24x7 rapid response team committed to keeping you protected at all times.",
+    stat: "27+ Years of Trust",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80",
     cta: "Start Assessment",
     icon: ShieldCheck,
   },
   {
-    eyebrow: "Infrastructure Modernization",
-    title: "Transform networks, cloud, and support into one seamless operating model.",
+    eyebrow: "Network & Endpoint Protection",
+    title: "Advanced Security Solutions for Your Digital Backbone.",
     description:
-      "From server rooms to branch networks, we shape environments for uptime, visibility, and simple decision-making.",
-    stat: "99.5% Uptime Focus",
+      "Network security, endpoint protection, and secure infrastructure design tailored to identify vulnerabilities, mitigate threats, and ensure your business continuity with proven expertise.",
+    stat: "24x7 Response Team",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600&q=80",
     cta: "See Solutions",
     icon: Network,
   },
   {
-    eyebrow: "Managed Security",
-    title: "Show the board what risk looks like, then reduce it with precision.",
+    eyebrow: "Threat Detection & Response",
+    title: "Proactive Risk Management and Compliance Assurance.",
     description:
-      "Simulations, assessments, and support programs that help teams understand exposure and act with confidence.",
-    stat: "24x7 Support View",
+      "With deep technical expertise and strategic partnerships, we combine risk-driven approach to protect your critical assets, strengthen compliance, and enable secure digital transformation.",
+    stat: "Expert Team Ready",
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&q=80",
     cta: "View Services",
     icon: Server,

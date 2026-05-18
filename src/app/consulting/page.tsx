@@ -49,10 +49,10 @@ export default function Page() {
                 Consulting
               </span>
               <h1 className="mt-6 text-4xl md:text-6xl font-black uppercase tracking-tight text-slate-900 heading-tech">
-                Advisory that turns <span className="text-[#0F4C92]">complexity into a plan</span>
+                Strategic Consulting that <span className="text-[#0F4C92]">Transforms Security</span>
               </h1>
               <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-600 font-medium">
-                Unique consulting styling for your site: bold navy surfaces, glass cards, and a structured advisory narrative built for decision-makers.
+                Our consulting services guide organizations through complex security and IT challenges. We assess your environment, design solutions aligned with your business goals, and support implementation with measurable outcomes.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -91,10 +91,10 @@ export default function Page() {
           <div className="mt-12 grid gap-6 lg:grid-cols-[1.2fr_0.8fr] items-stretch">
             <div className="rounded-[2rem] bg-white p-7 md:p-8 border border-slate-200 shadow-[0_18px_50px_rgba(15,76,146,0.08)]">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#0F4C92] heading-tech">
-                <MessageSquare size={14} /> Advisory Model
+                <MessageSquare size={14} /> Engagement Model
               </div>
               <h2 className="mt-4 text-3xl font-black uppercase tracking-tight text-slate-900 heading-tech">
-                A clear consulting flow for better decisions
+                From Assessment to Excellence
               </h2>
               <div className="mt-8 grid gap-4 md:grid-cols-4">
                 {phases.map(([phase, detail], index) => (
@@ -108,14 +108,14 @@ export default function Page() {
             </div>
 
             <div className="rounded-[2rem] bg-linear-to-br from-[#0F4C92] to-[#0b3a74] p-7 md:p-8 text-white shadow-[0_18px_50px_rgba(15,76,146,0.2)]">
-              <div className="text-xs font-bold uppercase tracking-[0.3em] text-blue-200 heading-tech">Why this works</div>
-              <h2 className="mt-4 text-3xl font-black uppercase tracking-tight heading-tech">Practical, executive-ready, and measurable</h2>
+              <div className="text-xs font-bold uppercase tracking-[0.3em] text-blue-200 heading-tech">Our Approach</div>
+              <h2 className="mt-4 text-3xl font-black uppercase tracking-tight heading-tech">Risk-Driven Solutions That Work</h2>
               <p className="mt-4 text-white/80 leading-relaxed">
-                Your consulting page gets a stronger visual identity while still feeling credible for an enterprise IT and cybersecurity audience.
+                We combine deep technical expertise with a business-focused approach. Our 27 years of experience enables us to design solutions that fit your environment, reduce risk, and deliver measurable outcomes.
               </p>
               <div className="mt-8 rounded-[1.5rem] bg-white/10 border border-white/15 p-5 backdrop-blur-md">
-                <p className="text-sm uppercase tracking-[0.22em] text-blue-200 font-bold heading-tech">Next step</p>
-                <p className="mt-2 text-lg font-semibold">Start with discovery, then move into a scoped roadmap that fits your environment.</p>
+                <p className="text-sm uppercase tracking-[0.22em] text-blue-200 font-bold heading-tech">Backed By</p>
+                <p className="mt-2 text-lg font-semibold">24x7 rapid response team, strategic partnerships, and relentless commitment to your security.</p>
               </div>
             </div>
           </div>

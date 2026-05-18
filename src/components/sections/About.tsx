@@ -53,8 +53,8 @@ export const About = () => {
               viewport={{ once: true }}
               className="absolute -bottom-6 -right-6 bg-white p-10 rounded-[2rem] shadow-xl text-center z-20 min-w-45 border border-blue-200"
             >
-              <div className="text-5xl font-black text-[#0F4C92] mb-1 tracking-tighter heading-tech">10+</div>
-              <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Years In Delivery</div>
+              <div className="text-5xl font-black text-[#0F4C92] mb-1 tracking-tighter heading-tech">27+</div>
+              <div className="text-sm font-bold text-slate-500 uppercase tracking-widest">Years of Excellence</div>
             </motion.div>
           </motion.div>
 
@@ -64,19 +64,23 @@ export const About = () => {
             viewport={{ once: true }}
             className="lg:pl-12"
           >
-            <span className="text-[#0F4C92] font-bold uppercase tracking-[0.2em] text-sm mb-4 block heading-tech">About Us</span>
+            <span className="text-[#0F4C92] font-bold uppercase tracking-[0.2em] text-sm mb-4 block heading-tech">About D M Systems</span>
             <h3 className="text-4xl lg:text-5xl font-black text-slate-900 mb-8 leading-[1.05] uppercase tracking-tight heading-tech">
-              Design, Implement, And Support Your IT Lifecycle
+              27 Years of Trusted Cybersecurity Excellence
             </h3>
             <p className="text-slate-600 text-lg mb-10 leading-relaxed font-medium max-w-xl">
-              Our consulting and engineering teams align infrastructure programs with business outcomes. From site surveys and architecture to rollout and managed support, each phase is governed by measurable SLAs.
+              D M Systems Pvt. Ltd. is a trusted cybersecurity and IT solutions provider dedicated to safeguarding businesses in an increasingly complex digital landscape. We specialize in delivering advanced security solutions, including network security, endpoint protection, threat detection and response, and secure infrastructure design.
+            </p>
+            <p className="text-slate-600 text-lg mb-10 leading-relaxed font-medium max-w-xl">
+              With a proactive and risk-driven approach, we help organizations identify vulnerabilities, mitigate cyber threats, and ensure business continuity. Backed by a team of skilled professionals and strategic technology partnerships, we combine deep technical expertise with tailored solutions.
             </p>
 
             <div className="space-y-6 mb-12">
               {[
-                "Structured discovery: site audit, requirement mapping, risk baseline",
-                "Predictable implementation: milestones, approvals, and controlled change",
-                "Continuous support: warranty coverage and AMC-led optimization"
+                "Design world-class cybersecurity solutions tailored to your needs",
+                "Deploy with precision and measurable SLAs for your peace of mind",
+                "Monitor & respond with our relentless 24x7 rapid response team",
+                "Audit and optimize for continuous security improvement"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-2 h-0.5 bg-primary" />

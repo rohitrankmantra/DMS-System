@@ -46,10 +46,10 @@ export default function Page() {
                 Contact Us
               </span>
               <h1 className="mt-6 text-4xl md:text-6xl font-black uppercase tracking-tight text-slate-900 heading-tech">
-                Let&apos;s build a <span className="text-[#0F4C92]">secure line of communication</span>
+                Get in Touch with <span className="text-[#0F4C92]">DMS Systems</span>
               </h1>
               <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-600 font-medium">
-                A cleaner, more dramatic contact page with a custom pattern background, layered info cards, and a premium form layout.
+                Ready to strengthen your cybersecurity posture? Reach out to our team for consultations, assessments, or support. We're here to help with enterprise-grade security solutions tailored to your needs.
               </p>
 
               <div className="mt-8 grid gap-4">
@@ -78,13 +78,13 @@ export default function Page() {
                 <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full bg-[#0F4C92]/10 blur-3xl" />
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-[#0F4C92] heading-tech">
-                    <Send size={14} /> Send a brief
+                    <Send size={14} /> Get in Touch
                   </div>
                   <h2 className="mt-4 text-3xl font-black uppercase tracking-tight text-slate-900 heading-tech">
-                    Tell us what you need
+                    Let's Discuss Your Security Needs
                   </h2>
                   <p className="mt-3 text-slate-600 font-medium leading-relaxed">
-                    Use this form to request support, project guidance, assessments, or a call-back from the team.
+                    Share your requirements, and our team will reach out within one business day with tailored solutions and next steps.
                   </p>
 
                   <form className="mt-8 space-y-5">

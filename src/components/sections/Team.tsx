@@ -6,24 +6,22 @@ import Image from "next/image";
 
 const team = [
   {
-    name: "Gaurav Setia",
-    role: "Director",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
-  },
-  {
-    name: "Ashish Singh",
-    role: "Sales Head",
+    name: "Devender Kumar Bajaj (D.K. Bajaj)",
+    role: "Founder & Chairman",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
+    bio: "A pioneer in cybersecurity with 34+ years of IT industry experience. Founded D M Systems 27 years ago. Former senior management with Hero Group & Birla Group."
   },
   {
-    name: "Mahi Shukla",
-    role: "Product Manager",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80",
+    name: "Pallavi Bhardwaj",
+    role: "VP - Channel Business & Operations",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
+    bio: "Core leader with 25+ years in operations & channel business. With DMS since inception. Heads Channel Business & Operations, ensuring client satisfaction."
   },
   {
-    name: "Shivam Chauhan",
-    role: "Team Lead, Sales",
+    name: "Amit Sharma",
+    role: "Manager - Finance & Accounts",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
+    bio: "18+ years in finance and taxation expertise. Joined 2015. Strengthened financial processes, regulatory compliance, and fiscal management."
   },
 ];
 
@@ -47,7 +45,7 @@ export const Team = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl lg:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tight heading-tech"
           >
-            Experts Behind Delivery
+            Visionary Leaders Shaping Cybersecurity
           </motion.h3>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -56,11 +54,11 @@ export const Team = () => {
             transition={{ delay: 0.2 }}
             className="text-slate-600 text-lg font-medium"
           >
-            Cross-functional leaders in consulting, engineering, and support operations with enterprise deployment experience.
+            Decades of combined experience in cybersecurity, operations, and strategic business management driving excellence across all domains.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -84,9 +82,14 @@ export const Team = () => {
                   <h4 className="text-xl font-black text-slate-900 mb-2 heading-tech group-hover:text-[#0F4C92] transition-colors">
                     {member.name}
                   </h4>
-                  <p className="text-[#0F4C92] font-bold uppercase tracking-widest text-sm">
+                  <p className="text-[#0F4C92] font-bold uppercase tracking-widest text-sm mb-3">
                     {member.role}
                   </p>
+                  {member.bio && (
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {member.bio}
+                    </p>
+                  )}
                 </div>
               </div>
             </motion.div>

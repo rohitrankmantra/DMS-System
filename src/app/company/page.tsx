@@ -1,5 +1,4 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
+// Navbar and Footer are provided by the company layout
 import { About } from "@/components/sections/About";
 import { Features } from "@/components/sections/Features";
 import { Team } from "@/components/sections/Team";
@@ -7,8 +6,7 @@ import { ShieldCheck, Eye, ArrowRight } from "lucide-react";
 
 export default function Page() {
   return (
-    <main className="relative flex min-h-screen flex-col overflow-x-hidden bg-slate-50">
-      <Navbar />
+    <main>
       <section className="relative overflow-hidden pt-32 pb-20">
         <div className="absolute inset-0 bg-grid-white opacity-45 pointer-events-none" />
         <div className="absolute inset-0 bg-pattern-logo-grid opacity-20 pointer-events-none" />
@@ -21,10 +19,10 @@ export default function Page() {
               Company
             </span>
             <h1 className="mt-6 text-4xl md:text-6xl font-black uppercase tracking-tight text-slate-900 heading-tech">
-              Built around <span className="text-[#0F4C92]">clarity, trust, and delivery</span>
+              D M Systems: <span className="text-[#0F4C92]">Protecting Digital Futures</span>
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-slate-600 font-medium">
-              This company page gives the submenu a proper destination and ties together your About, What We Do, Team, and mission / vision content in one place.
+              27 years of trusted cybersecurity and IT solutions expertise. We design, deploy, monitor, and audit world-class security solutions with a relentless 24x7 rapid response team.
             </p>
           </div>
 
@@ -33,19 +31,19 @@ export default function Page() {
               <div className="flex items-center gap-3 text-[#0F4C92] font-bold uppercase tracking-[0.24em] text-xs heading-tech">
                 <ShieldCheck size={16} /> Mission
               </div>
-              <h2 className="mt-4 text-3xl font-black uppercase tracking-tight text-slate-900 heading-tech">Deliver secure, practical IT outcomes</h2>
+              <h2 className="mt-4 text-3xl font-black uppercase tracking-tight text-slate-900 heading-tech">Establish as Trusted Leader</h2>
               <p className="mt-4 text-slate-600 leading-relaxed font-medium">
-                Our mission is to help businesses design, implement, and support reliable technology environments that remain secure, visible, and easy to operate.
+                To establish D M Systems Pvt. Ltd. as a trusted leader in cybersecurity by delivering reliable, high-quality solutions and building enduring partnerships with our customers and partners through integrity, expertise, and consistent excellence.
               </p>
             </div>
 
             <div className="rounded-[2rem] border border-slate-200 bg-linear-to-br from-[#0F4C92] to-[#0b3a74] p-8 text-white shadow-[0_18px_50px_rgba(15,76,146,0.18)]">
               <div className="flex items-center gap-3 text-blue-200 font-bold uppercase tracking-[0.24em] text-xs heading-tech">
-                <Eye size={16} /> Vision
+                <Eye size={16} /> What We Do
               </div>
-              <h2 className="mt-4 text-3xl font-black uppercase tracking-tight heading-tech">Be the trusted backbone for modern organizations</h2>
+              <h2 className="mt-4 text-3xl font-black uppercase tracking-tight heading-tech">Design, Deploy, Monitor & Protect</h2>
               <p className="mt-4 text-white/80 leading-relaxed font-medium">
-                Our vision is to be the partner teams rely on for resilient infrastructure, stronger cyber posture, and support that feels clear, calm, and dependable.
+                We don't just secure—we outsmart threats. We design, deploy, monitor, and audit world-class cybersecurity solutions, powered by a relentless 24x7 rapid response team committed to keeping you protected at all times.
               </p>
             </div>
           </div>
@@ -61,10 +59,10 @@ export default function Page() {
           <div className="rounded-[2.5rem] border border-white/10 bg-white/5 p-8 md:p-10 backdrop-blur-sm shadow-[0_22px_60px_rgba(0,0,0,0.22)]">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <div className="text-xs font-bold uppercase tracking-[0.24em] text-blue-200 heading-tech">Company summary</div>
-                <h2 className="mt-3 text-3xl font-black uppercase tracking-tight heading-tech">A cleaner route for your submenu items</h2>
+                <div className="text-xs font-bold uppercase tracking-[0.24em] text-blue-200 heading-tech">About Our Expertise</div>
+                <h2 className="mt-3 text-3xl font-black uppercase tracking-tight heading-tech">Leading Cybersecurity Solutions Provider</h2>
                 <p className="mt-3 max-w-2xl text-white/75 leading-relaxed">
-                  About Us, Team, What We Do, and Mission & Vision now have a proper visual home that matches the rest of the site.
+                  From network security and endpoint protection to threat detection, response, and secure infrastructure design—D M Systems delivers comprehensive solutions with the backing of skilled professionals and strategic technology partnerships.
                 </p>
               </div>
               <button className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-900 shadow-sm">
@@ -75,7 +73,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   );
 }

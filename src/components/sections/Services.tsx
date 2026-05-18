@@ -7,27 +7,27 @@ import { ArrowUpRight } from "lucide-react";
 
 const services = [
   {
-    title: "Perimeter Security",
+    title: "Network Security",
     description:
-      "Secure the boundary between your internal network and the public internet with layered access control, monitoring, and threat defense.",
+      "Protect your organization's digital backbone with advanced network security solutions, including segmentation, threat detection, and continuous monitoring.",
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80",
   },
   {
-    title: "E-mail Security",
+    title: "Endpoint Protection",
     description:
-      "Protect mailboxes and users from spam, phishing, malware, and unauthorized access with policy-driven controls.",
+      "Secure every device across your organization with comprehensive endpoint protection, malware defense, behavior analysis, and device hardening.",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80",
   },
   {
-    title: "End Point Solutions",
+    title: "Threat Detection & Response",
     description:
-      "Protect laptops and mobile devices with endpoint management, hardening, visibility, and response readiness.",
+      "Stay ahead of threats with our 24x7 rapid response team. We detect anomalies in real-time and respond with precision to minimize impact.",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
   },
   {
-    title: "Security Audits",
+    title: "Secure Infrastructure Design",
     description:
-      "Identify control gaps, compliance deficiencies, and improvement opportunities with a clear remediation roadmap.",
+      "Build security into your infrastructure from the ground up. We assess, design, and implement resilient solutions tailored to your unique needs.",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80",
   },
 ];
@@ -44,7 +44,7 @@ export const Services = () => {
             viewport={{ once: true }}
             className="text-primary font-bold tracking-[0.25em] uppercase text-sm mb-4 heading-tech"
           >
-            What We Do
+            Core Services
           </motion.h2>
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export const Services = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tight heading-tech"
           >
-            Security services built for modern operations
+            Comprehensive Security Solutions
           </motion.h3>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ export const Services = () => {
             transition={{ delay: 0.2 }}
             className="text-slate-600 text-lg font-medium"
           >
-            A focused set of solutions to protect your network, secure communication, harden endpoints, and improve overall security posture.
+            D M Systems delivers world-class cybersecurity solutions with 27 years of expertise. We design, deploy, monitor, and audit comprehensive security solutions powered by a relentless 24x7 response team.
           </motion.p>
         </div>
 

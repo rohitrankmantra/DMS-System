@@ -21,7 +21,7 @@ export const Footer = () => {
               <span className="text-xl font-bold tracking-tight text-[#0F4C92] heading-tech">DMS Systems</span>
             </Link>
             <p className="text-slate-600 text-sm leading-relaxed mb-6">
-              Integrated IT infrastructure, cyber risk visibility, and managed support for business-critical operations.
+              Trusted cybersecurity and IT solutions provider. We design, deploy, monitor, and audit world-class security solutions with a relentless 24x7 response team.
             </p>
             <div className="text-sm text-slate-600 space-y-2 mb-6">
               <div>
@@ -58,7 +58,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-slate-900 font-semibold mb-6">Services</h4>
             <ul className="space-y-4">
-              {["Cyber Risk Quantification", "Network and Security", "Cloud and Data Center", "Managed IT Support", "Compliance Readiness"].map((item) => (
+              {["Network Security", "Endpoint Protection", "Threat Detection & Response", "Infrastructure Design", "Compliance & Auditing"].map((item) => (
                 <li key={item}>
                   <Link href="#" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
                     {item}
