@@ -2,51 +2,53 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { Award, GraduationCap, Briefcase } from "lucide-react";
 
-const team = [
+const academicLeaders = [
   {
     name: "Devender Kumar Bajaj (D.K. Bajaj)",
     role: "Founder & Chairman",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
-    bio: "A pioneer in cybersecurity with 34+ years of IT industry experience. Founded D M Systems 27 years ago. Former senior management with Hero Group & Birla Group."
+    bio: "A pioneer in cybersecurity with 34+ years of IT industry experience. Founded D M Systems 27 years ago. Former senior management with Hero Group & Birla Group.",
+    icon: Award,
   },
   {
     name: "Pallavi Bhardwaj",
     role: "VP - Channel Business & Operations",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
-    bio: "Core leader with 25+ years in operations & channel business. With DMS since inception. Heads Channel Business & Operations, ensuring client satisfaction."
+    bio: "Core leader with 25+ years in operations & channel business. With DMS since inception. Heads Channel Business & Operations, ensuring client satisfaction.",
+    icon: Briefcase,
   },
   {
     name: "Amit Sharma",
     role: "Manager - Finance & Accounts",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
-    bio: "18+ years in finance and taxation expertise. Joined 2015. Strengthened financial processes, regulatory compliance, and fiscal management."
+    bio: "18+ years in finance and taxation expertise. Joined 2015. Strengthened financial processes, regulatory compliance, and fiscal management.",
+    icon: GraduationCap,
   },
 ];
 
 export const Team = () => {
   return (
-    <section id="team" className="py-24 relative overflow-hidden bg-slate-50">
-      <div className="container mx-auto px-6">
+    <section id="team" className="py-24 relative overflow-hidden bg-white">
+      <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(#0F4C92 1px, transparent 1px), linear-gradient(90deg, #0F4C92 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#0F4C92] font-bold uppercase tracking-[0.2em] text-sm mb-4 heading-tech"
+            className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-[#0F4C92] text-xs font-bold uppercase tracking-[0.2em] heading-tech mb-6"
           >
-            Leadership Team
-          </motion.h2>
-          <motion.h3
+            Academic Leadership
+          </motion.div>
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="text-4xl lg:text-5xl font-black text-slate-900 mb-6 uppercase tracking-tight heading-tech"
           >
-            Visionary Leaders Shaping Cybersecurity
-          </motion.h3>
+            Guiding Our <span className="text-[#0F4C92]">Academic Vision</span>
+          </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,43 +56,37 @@ export const Team = () => {
             transition={{ delay: 0.2 }}
             className="text-slate-600 text-lg font-medium"
           >
-            Decades of combined experience in cybersecurity, operations, and strategic business management driving excellence across all domains.
+            Distinguished leaders with decades of experience shaping the future of cybersecurity education and industry practice.
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {team.map((member, index) => (
+          {academicLeaders.map((leader, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -6 }}
+              transition={{ delay: index * 0.15, duration: 0.6 }}
+              whileHover={{ y: -8, scale: 1.02 }}
               className="group"
             >
-              <div className="bg-white rounded-[2rem] overflow-hidden shadow-[0_4px_30px_rgba(15,76,146,0.08)] group-hover:shadow-[0_10px_50px_rgba(15,76,146,0.15)] transition-all">
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
+              <div className="h-full bg-gradient-to-br from-white to-blue-50 rounded-[2.5rem] p-8 border border-blue-200 shadow-[0_10px_40px_rgba(15,76,146,0.1)] group-hover:shadow-[0_20px_60px_rgba(15,76,146,0.18)] transition-all">
+                <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-[#0F4C92] to-[#3B82F6] flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform">
+                  <leader.icon size={40} className="text-white" />
                 </div>
-                <div className="p-6 text-center">
-                  <h4 className="text-xl font-black text-slate-900 mb-2 heading-tech group-hover:text-[#0F4C92] transition-colors">
-                    {member.name}
-                  </h4>
-                  <p className="text-[#0F4C92] font-bold uppercase tracking-widest text-sm mb-3">
-                    {member.role}
-                  </p>
-                  {member.bio && (
-                    <p className="text-slate-600 text-sm leading-relaxed">
-                      {member.bio}
-                    </p>
-                  )}
-                </div>
+                
+                <h3 className="text-2xl font-black text-slate-900 mb-3 heading-tech group-hover:text-[#0F4C92] transition-colors">
+                  {leader.name}
+                </h3>
+                
+                <p className="text-[#0F4C92] font-bold uppercase tracking-widest text-sm mb-6">
+                  {leader.role}
+                </p>
+                
+                <p className="text-slate-600 text-base leading-relaxed">
+                  {leader.bio}
+                </p>
               </div>
             </motion.div>
           ))}
