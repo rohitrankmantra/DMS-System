@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 const companyLinks = [
   { name: "About Us", href: "/company/about" },
-  { name: "Academic Leadership", href: "/academic-leadership" },
+  { name: "Academic Leadership", href: "/company/academic-leadership" },
   { name: "What We Do", href: "/company/what-we-do" },
   { name: "Mission & Vision", href: "/company/mission-vision" },
   { name: "Careers", href: "/careers" },
