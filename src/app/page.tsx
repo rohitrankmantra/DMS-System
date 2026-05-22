@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { HeroSlider } from "@/components/sections/HeroSlider";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { About } from "@/components/sections/About";
@@ -18,6 +19,7 @@ export default function Home() {
   return (
     <main className="relative flex flex-col min-h-screen overflow-x-hidden">
       <Navbar />
+      <HeroSlider />
       <Hero />
       <Services />
       <About />

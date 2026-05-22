@@ -66,16 +66,15 @@ export const Navbar = () => {
           )}
         >
           <div className="container mx-auto px-8 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 group">
-              <motion.div
-                whileHover={{ rotate: 14, scale: 1.06 }}
-                transition={{ type: "spring", stiffness: 260, damping: 14 }}
-                className="w-11 h-11 rounded-md overflow-hidden border border-blue-200 bg-white shadow-[0_6px_20px_rgba(28,120,200,0.22)] transition-transform duration-300"
+            <Link href="/" className="flex flex-col items-center gap-1 group leading-none">
+              <div className="w-12 h-12 shrink-0 overflow-hidden rounded-md bg-transparent">
+                <Image src="/dms-logo.png" alt="DMS logo" width={48} height={48} className="h-full w-full object-contain p-1" />
+              </div>
+              <span
+                className="text-sm font-bold tracking-[0.18em] uppercase"
+                style={{ fontFamily: '"Tw Cen MT", "Trebuchet MS", sans-serif', color: "#0C3F79" }}
               >
-                <Image src="/logo.jpg" alt="DMS logo" width={44} height={44} className="object-cover w-full h-full" />
-              </motion.div>
-              <span className="text-lg font-black tracking-tight text-[#0F4C92] uppercase heading-tech">
-                 Systems
+                DM System
               </span>
             </Link>
 
@@ -179,19 +178,18 @@ export const Navbar = () => {
               <div className="p-8">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-8">
-                  <Link href="/" className="flex items-center gap-3" onClick={() => setSidebarOpen(false)}>
-                    <motion.div
-                      whileHover={{ rotate: 14, scale: 1.06 }}
-                      transition={{ type: "spring", stiffness: 260, damping: 14 }}
-                      className="w-14 h-14 rounded-xl overflow-hidden border border-blue-200 bg-white shadow-[0_6px_20px_rgba(28,120,200,0.22)] transition-transform duration-300"
-                    >
-                      <Image src="/logo.jpg" alt="DMS logo" width={56} height={56} className="object-cover w-full h-full" />
-                    </motion.div>
-                    <div>
-                      <span className="text-xl font-black tracking-tight text-[#0F4C92] uppercase heading-tech">
-                        DMS Systems
+                  <Link href="/" className="flex flex-col items-center gap-2" onClick={() => setSidebarOpen(false)}>
+                    <div className="w-16 h-16 shrink-0 overflow-hidden rounded-xl bg-transparent">
+                      <Image src="/dms-logo.png" alt="DMS logo" width={64} height={64} className="h-full w-full object-contain p-1" />
+                    </div>
+                    <div className="text-center">
+                      <span
+                        className="block text-sm font-bold tracking-[0.18em] uppercase leading-none"
+                        style={{ fontFamily: '"Tw Cen MT", "Trebuchet MS", sans-serif', color: "#0C3F79" }}
+                      >
+                        DM System
                       </span>
-                      <p className="text-xs text-slate-500 font-semibold tracking-wide uppercase">
+                      <p className="mt-1 text-xs text-slate-500 font-semibold tracking-wide uppercase">
                         Integrated IT Infrastructure
                       </p>
                     </div>

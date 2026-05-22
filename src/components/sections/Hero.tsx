@@ -78,19 +78,25 @@ export const Hero = () => {
       <div className="absolute bottom-0 -right-20 w-105 h-105 bg-sky-200/60 blur-[110px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 rounded-xl overflow-hidden border border-blue-200 bg-white shadow-[0_10px_24px_rgba(15,76,146,0.12)]">
-                <Image src="/logo.jpg" alt="DMS Systems logo" width={56} height={56} className="w-full h-full object-cover" />
+            <div className="flex items-center gap-4 mb-6 justify-center lg:justify-start">
+              <div className="w-16 h-16 rounded-xl overflow-hidden bg-transparent">
+                <Image src="/dms-logo.png" alt="DMS Systems logo" width={64} height={64} className="w-full h-full object-contain p-1" />
               </div>
-              <div>
+              <div className="text-center lg:text-left">
                 <div className="h-0.5 w-12 bg-[#0F4C92] mb-2" />
-                <span className="text-[#0F4C92] font-bold uppercase tracking-[0.2em] text-sm heading-tech">Integrated IT Infrastructure</span>
+                <span
+                  className="block text-sm font-bold tracking-[0.18em] uppercase leading-none"
+                  style={{ fontFamily: '"Tw Cen MT", "Trebuchet MS", sans-serif', color: "#0C3F79" }}
+                >
+                  DM System
+                </span>
+                <span className="mt-2 block text-[#0F4C92] font-bold uppercase tracking-[0.2em] text-sm heading-tech">Integrated IT Infrastructure</span>
               </div>
             </div>
 
@@ -108,12 +114,12 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-slate-600 text-base lg:text-lg mb-10 max-w-xl leading-relaxed font-medium"
+              className="text-slate-600 text-base lg:text-lg mb-10 max-w-xl leading-relaxed font-medium mx-auto lg:mx-0"
             >
               {currentSlide.description}
             </motion.p>
 
-            <div className="flex flex-wrap items-center gap-6">
+            <div className="flex flex-wrap items-center gap-6 justify-center lg:justify-start">
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
@@ -134,7 +140,7 @@ export const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative"
+            className="relative mx-auto"
           >
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden border border-blue-200 shadow-[0_24px_60px_rgba(15,23,42,0.12)] bg-white backdrop-blur-xl">
               <div className="absolute inset-0 bg-linear-to-br from-white/90 via-white/35 to-transparent" />

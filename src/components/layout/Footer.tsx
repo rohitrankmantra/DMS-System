@@ -9,16 +9,21 @@ export const Footer = () => {
   return (
     <footer className="relative overflow-hidden border-t border-slate-200">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600&q=80')] bg-cover bg-center opacity-40 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/80 to-white/60 backdrop-blur-sm pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-white/95 via-white/80 to-white/60 backdrop-blur-sm pointer-events-none" />
 
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="w-12 h-12 rounded-xl overflow-hidden border border-blue-200 bg-white shadow-[0_10px_24px_rgba(15,76,146,0.14)]">
-                <Image src="/logo.jpg" alt="DMS Systems logo" width={48} height={48} className="w-full h-full object-cover" />
+            <Link href="/" className="flex flex-col items-center gap-2 mb-6 group text-center">
+              <div className="w-14 h-14 rounded-xl overflow-hidden bg-transparent">
+                <Image src="/dms-logo.png" alt="DMS Systems logo" width={56} height={56} className="w-full h-full object-contain p-1" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-[#0F4C92] heading-tech">DMS Systems</span>
+              <span
+                className="text-sm font-bold tracking-[0.18em] uppercase leading-none"
+                style={{ fontFamily: '"Tw Cen MT", "Trebuchet MS", sans-serif', color: "#0C3F79" }}
+              >
+                DM System
+              </span>
             </Link>
             <p className="text-slate-600 text-sm leading-relaxed mb-6">
               Trusted cybersecurity and IT solutions provider. We design, deploy, monitor, and audit world-class security solutions with a relentless 24x7 response team.
